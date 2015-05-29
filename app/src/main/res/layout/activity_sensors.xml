@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F0F0F0"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Sensors">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonSettings"
+        android:src="@mipmap/ic_launcher"
+        android:background="@null"
+        android:onClick="clickSettings"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:id="@+id/tableLayout1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow1"
+            android:background="@drawable/row"
+            style="@style/styleTableRow"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewLight"
+                android:src="@mipmap/light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/light"
+                style="@style/customTextSensors"
+                android:id="@+id/textViewLight"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/imageViewLight"
+                android:layout_toEndOf="@+id/imageViewLight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:textColor="@color/cyan"
+                android:id="@+id/textViewLightValue"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textViewLight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:id="@+id/textViewLightValueLabel"
+                android:layout_centerVertical="true"
+                android:text="@string/lx"
+                android:layout_toRightOf="@+id/textViewLightValue" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow2"
+            style="@style/styleTableRow"
+            android:background="@drawable/row"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewPressure"
+                android:src="@mipmap/presure" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pressure"
+                android:layout_marginLeft="1dp"
+                style="@style/customTextSensors"
+                android:id="@+id/textViewPressure"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageViewPressure"
+                android:layout_toEndOf="@+id/imageViewPressure" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:textColor="@color/cyan"
+                android:id="@+id/textViewPressureValue"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textViewPressure" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:id="@+id/textViewPressureValueLabel"
+                android:layout_centerVertical="true"
+                android:text="@string/hpa"
+                android:layout_toRightOf="@+id/textViewPressureValue" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow3"
+            style="@style/styleTableRow"
+            android:background="@drawable/row"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewMagnetic"
+                android:src="@mipmap/magnes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/magnetic"
+                style="@style/customTextSensors"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/textViewMagnetic"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageViewMagnetic"
+                android:layout_toEndOf="@+id/imageViewMagnetic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:textColor="@color/cyan"
+                android:id="@+id/textViewMagneticValue"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textViewMagnetic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:id="@+id/textViewMagneticValueLabel"
+                android:layout_centerVertical="true"
+                android:text="@string/gauss"
+                android:layout_toRightOf="@+id/textViewMagneticValue" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow4"
+            style="@style/styleTableRow"
+            android:background="@drawable/row"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewAltitude"
+                android:src="@mipmap/altitude" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/altitude"
+                style="@style/customTextSensors"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/textViewAltitude"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageViewAltitude"
+                android:layout_toEndOf="@+id/imageViewAltitude" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:id="@+id/textViewAltitudeValue"
+                android:layout_centerVertical="true"
+                android:textColor="@color/cyan"
+                android:layout_toRightOf="@+id/textViewAltitude" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/customTextSensors"
+                android:id="@+id/textViewAltitudeValueLabel"
+                android:layout_centerVertical="true"
+                android:text="@string/m"
+                android:layout_toRightOf="@+id/textViewAltitudeValue" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</RelativeLayout>

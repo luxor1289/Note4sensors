@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Note 4 sensors</string>
+    <string name="light">Natężenie światła: </string>
+    <string name="pressure">Ciśnienie: </string>
+    <string name="magnetic">Pole magnetyczne: </string>
+    <string name="altitude">Wysokość \nbarometryczna: </string>
+    <string name="lx">lx</string>
+    <string name="hpa">hPa</string>
+    <string name="gauss">Gauss</string>
+    <string name="m">m</string>
+
+</resources>
